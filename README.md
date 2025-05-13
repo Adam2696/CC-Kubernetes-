@@ -71,3 +71,13 @@ sudo mv minikube-linux-amd64 /usr/local/bin/minikube<br>
 Les commandes que j'ai exécutées ont déployé les différentes parties de l'application de vote dans mon cluster Kubernetes. Chaque "deployment" crée des pods pour chaque service (comme la base de données, Redis, le vote, etc.)
 
 ![Texte alternatif](Image/apply.png)
+
+Les commandes minikube service vote et minikube service result ont ouvert les services vote et result dans le navigateur, vous permettant d'accéder à leurs interfaces via les URL respectives :
+
+Pour le service vote : http://192.168.49.2:31000
+
+Pour le service result : http://192.168.49.2:31001
+
+Cela permet d'interagir avec l'application de vote et de voir les résultats en temps réel.
+
+![Texte alternatif](Image/expositionservice.png)
