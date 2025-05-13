@@ -27,6 +27,21 @@ sudo apt install -y docker.io
 sudo systemctl enable --now docker
 docker --version
 
+✅ J'ai installé Docker manuellement sur Ubuntu avec sécurité :<br>
+
+J'ai ajouté la clé GPG officielle de Docker.<br>
+
+J'ai ajouté le dépôt Docker stable dans les sources APT.<br>
+
+J'ai mis à jour les paquets (sudo apt update).<br>
+
+Puis, j'ai installé Docker (docker-ce, docker-ce-cli, etc.).<br>
+
+Et j'ai ajouté mon utilisateur au groupe Docker pour exécuter Docker sans sudo.<br>
+
+Cela permet une installation propre et sécurisée.<br>
+
+![Texte alternatif](Image/docker.png)
 
 ###  Installer kubectl
 curl -LO "https://dl.k8s.io/release/$(curl -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
