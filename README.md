@@ -68,4 +68,6 @@ sudo mv minikube-linux-amd64 /usr/local/bin/minikube<br>
 ![Texte alternatif](Image/demarrerminikub.png)
 
 
+Les commandes que j'ai exécutées ont déployé les différentes parties de l'application de vote dans mon cluster Kubernetes. Chaque "deployment" crée des pods pour chaque service (comme la base de données, Redis, le vote, etc.)
 
+![Texte alternatif](Image/apply.png)
