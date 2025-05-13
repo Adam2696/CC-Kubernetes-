@@ -138,4 +138,10 @@ Une fois que les commandes sont valid√©es et que les modifications sont appliqu√
 ![Texte alternatif](Image/voteresult.png)
 ![Texte alternatif](Image/vote.png)
 
+
+SCHEMA DU LAB
+![Texte alternatif](Image/Capture.PNG)
+
+
+
 EXERCICE TERMINER
