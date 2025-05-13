@@ -44,6 +44,7 @@ Clonez le dépôt contenant les fichiers nécessaires pour déployer l'applicati
 git clone https://github.com/dockersamples/example-voting-app.git
 cd example-voting-app
 
+
 ![Texte alternatif](Image/Gitclone.png)
 
 Installation et démarrage Minikube
