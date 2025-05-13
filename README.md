@@ -81,3 +81,15 @@ Pour le service result : http://192.168.49.2:31001
 Cela permet d'interagir avec l'application de vote et de voir les résultats en temps réel.
 
 ![Texte alternatif](Image/expositionservice.png)
+
+Les commandes kubectl get pods et kubectl get all montrent l'état actuel des ressources Kubernetes déployées.
+
+Pods : Vous avez plusieurs pods qui sont en cours d'exécution et prêts, avec une disponibilité de 1/1, ce qui signifie qu'une seule instance de chaque pod fonctionne normalement.
+
+Services : Les services tels que db, redis, result, et vote sont créés et accessibles.
+
+Deployments et ReplicaSets : Ces objets gèrent le déploiement des applications, et chaque pod est associé à un ReplicaSet pour garantir sa disponibilité.
+
+Les ressources sont bien déployées avec tous les services et pods en statut Running, ce qui signifie que l'application fonctionne correctement.
+
+![Texte alternatif](Image/getpods.png)
