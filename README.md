@@ -136,6 +136,6 @@ Cela permettra à un utilisateur de voter plusieurs fois et d'enregistrer chaque
 Une fois que les commandes sont validées et que les modifications sont appliquées, on peut désormais voter plusieurs fois
 
 ![Texte alternatif](Image/voteresult.png)
-![Texte alternatif](Image/Image/vote.png)
+![Texte alternatif](Image/vote.png)
 
 EXERCICE TERMINER
