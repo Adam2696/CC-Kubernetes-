@@ -43,4 +43,16 @@ Clonez le dépôt contenant les fichiers nécessaires pour déployer l'applicati
 
 git clone https://github.com/dockersamples/example-voting-app.git
 cd example-voting-app
+
 ![Texte alternatif](Image/Gitclone.png)
+
+Installation et démarrage Minikube
+sudo apt update
+sudo apt install -y curl apt-transport-https virtualbox
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo mv minikube-linux-amd64 /usr/local/bin/minikube
+
+![Texte alternatif](Image/demarrerminikub.png)
+
+
+
