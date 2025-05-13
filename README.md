@@ -93,3 +93,49 @@ Deployments et ReplicaSets : Ces objets gèrent le déploiement des applications
 Les ressources sont bien déployées avec tous les services et pods en statut Running, ce qui signifie que l'application fonctionne correctement.
 
 ![Texte alternatif](Image/getpods.png)
+
+-L 31000:192.168.49.2:31000 : Redirige le port local 31000 vers le port 31000 de l'hôte 192.168.49.2.
+
+-L 31001:192.168.49.2:31001 : Redirige également le port local 31001 vers le port 31001 de l'hôte 192.168.49.2.
+
+user@192.168.24.141 : Connexion SSH à l'hôte distant avec l'adresse IP 192.168.24.141 en tant qu'utilisateur user.
+
+
+![Texte alternatif](Image/ssh.png)
+
+
+ERREUR PLUSIEURS VOTES
+Le problème vient probablement de la contrainte d'unicité sur l'id dans la table des votes, ce qui empêche d'enregistrer plusieurs votes du même utilisateur. Pour résoudre cela, il faut supprimer cette contrainte et s'assurer qu'un identifiant unique est attribué à chaque vote. Ensuite, plusieurs votes pourront être insérés pour le même utilisateur sans conflit.
+
+![Texte alternatif](Image/verificationlogdb.png)
+
+SOLUTION
+Supprimer la contrainte d'unicité sur id pour permettre des votes multiples du même utilisateur. Par exemple, si tu utilises une table votes(id, vote) et que id est unique, tu peux modifier cette contrainte :
+
+sql
+Copier
+Modifier
+ALTER TABLE votes DROP CONSTRAINT IF EXISTS votes_id_key;
+Ajouter une nouvelle colonne d'identifiant unique pour chaque vote :
+
+sql
+Copier
+Modifier
+ALTER TABLE votes ADD COLUMN vote_id SERIAL PRIMARY KEY;
+Insérer plusieurs votes sans erreur :
+Une fois la contrainte d'unicité supprimée, tu peux insérer plusieurs votes :
+
+sql
+Copier
+Modifier
+INSERT INTO votes (id, vote) VALUES ('test123', 'a');
+INSERT INTO votes (id, vote) VALUES ('test123', 'b');
+Cela permettra à un utilisateur de voter plusieurs fois et d'enregistrer chaque vote séparément dans la base de données.
+
+
+Une fois que les commandes sont validées et que les modifications sont appliquées, on peut désormais voter plusieurs fois
+
+![Texte alternatif](Image/voteresult.png)
+![Texte alternatif](Image/Image/vote.png)
+
+EXERCICE TERMINER
